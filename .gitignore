@@ -3,5 +3,5 @@ dist
 .tmp
 .sass-cache
 app/bower_components
-!greensock
+!greensock-js
 test/bower_components
