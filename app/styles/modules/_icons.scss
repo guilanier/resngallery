@@ -1,0 +1,22 @@
+/* Font Icons */
+
+.icon{
+
+	font-family: "resn-iconset";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Miscellaneous
+.icon-arrow-left:before { content: "\2190"; font-size: 1.3em; }
+.icon-arrow-right:before{ content: "\2192"; font-size: 1.3em; }
+
+// Nav
+.icon-close:before 		{ content: "\2A2F"; font-size: 1.3em; }
+
+// Project
+.icon-kitten:before 	{ content: "\E001"; font-size: 1.7em; }

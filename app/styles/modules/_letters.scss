@@ -1,0 +1,28 @@
+/* #Letters
+====================================================================================================================================================== */
+
+$list-colors-letters: (#b6e5b9, #c5dcb1, #bddfc9, #bddfc9, #bddfc9, #bdd5e5, #9eeecd);
+
+.letters{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-family: "GothamBold";
+	pointer-events: none;
+	top: 0;
+	z-index: 11;
+	overflow: hidden;
+}
+
+.letters > .letters_char{
+	position: absolute;
+	font-size: 112px;
+	opacity: 0;
+}
+
+// set the color of each letters
+@for $i from 1 to length($list-colors-letters)+1{
+	.letters > .letters_char:nth-child(#{$i}){
+		color: nth($list-colors-letters, $i);
+	}
+}

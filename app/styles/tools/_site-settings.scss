@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+// ----------------------
+// == Site settings
+// ----------------------
+
+
+// Colour Scheme
+// =============
+// To avoid confusion with CSS properties,
+// colour scheme variable names use american english _color_
+
+// Main colour palette
+$color-primary: #23272d; // blue
+$color-secondary: #f2efdf; // white
+$color-highlight: #ff7f66; // red
+$color-muted: #c6c7c5;
+$color-icon: #353536;
+
+$color-dark: #1c1c1c;
+
+// Buttons colours
+
+// Text colours
+$color-text-grey: #7e8082;
+$color-cover-title: #efefeb;
+
+// Common colours
+$color-text: $color-primary;
+$color-text-alt: #7e8082;
+$color-background: #fff;
+$color-background-alt: #f6f6f4;
+$color-border: #ddd;
+$color-border: #ddd;
+
+// Links
+$color-link-default: #ffffff;
+$color-link-visited: darken($color-link-default, 10%);
+$color-link-hover: lighten($color-link-default, 10%);
+$color-link-active: darken($color-link-default, 10%);
+
+// Code
+$color-code: #333;
+$color-code-background: #f3f3f3;
+$color-pre: #d4d4d4;
+$color-pre-background: #333;
+
+// Selections
+$color-selection: #ff7f66;
+
+// Messages
+$color-message: #f4ecbb;
+$color-success: #2cde2c;
+$color-warning: #cf8600;
+$color-important: #d00;
+$color-notice: #66b;
+
+
+// Base Sizes
+// ==========
+
+// Included shorthands as these may be used a lot.
+
+$base-font-size: 16;
+$base-line-height: 24;
+$base-fs: $base-font-size;
+$base-lh: $base-line-height;
+
+// Random
+$menu-width: 280px;
+$content-basic-width : 940px;
+
+// Project Fonts
+// ===========
+
+$gotham-bold 	 : "GothamBold";
+$gotham-light  	 : "GothamLight";
+
+.g-bold{ 
+    font-family: $gotham-bold  !important;
+}
+
+.g-light{ 
+    font-family: $gotham-light !important;
+}
+
+
+// Font Stacks
+// ===========
+
+$font-family-default: $gotham-light;
+
+$font-family-sans: sans-serif;
+$font-family-serif: Georgia, serif;
+$font-family-display: $gotham-light, sans-serif;
+$font-family-caption: Verdana, sans-serif;
+$font-family-monospace: "Menlo", "Bitstream Vera Sans", Monaco, "Andale Mono", "Lucida Console", "Droid Mono", monospace;
+
+
+// Font Weights
+// ============
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 700;
+$font-weight-bold: 900;
+
+// Grid
+// ===========
+// 
+// $container-style: static;
+
+$total-columns: 16;
+$column-width : 40px;
+$gutter-width : 20px;
+$grid-padding : $gutter-width;
+$container-style: magic;
+$base-font-size: 16px;
+
+$show-grid-backgrounds  : true;
+
+
+// home gallery
+$total-columns-gallery: 18;
+$column-width-gallery : 49px;
+$gutter-width-gallery : 11px;
+
+
+// Breakpoints
+// ===========
+// There are no common breakpoints so these are just a suggestion
+// You'll need to define your own breakpoints to suit your design
+
+$breakpoint-narrow: 6 35em;
+$breakpoint-mid: 12 48em;
+// $breakpoint-wide: 60em 16;
+// $breakpoint-huge: 100em;
+
+

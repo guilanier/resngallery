@@ -1,0 +1,30 @@
+<script type="text/x-handlebars-template">
+	
+	<div class="icon icon-kitten"></div>
+
+	<div class="details_wrapper centered-flexbox">
+		<div class="details_wrapper_info">
+			<h1 class="details_title">{{name}}</h1>
+			<hr />
+			<p class="details_desc">{{description}}</p>
+		</div>
+		<div class="details_wrapper_img">
+			<img src="{{src}}" />
+		</div>
+	</div>
+	{{#if previousModel}}
+		<a data-link='{{previousModel}}' href="#">
+			<div class="icon icon-arrow-left"></div>
+		</a>
+	{{/if}}
+	{{#if nextModel}}
+		<a data-link='{{nextModel}}' href="#">
+			<div class="icon icon-arrow-right"></div>
+		</a>
+	{{/if}}
+	<a href="/">
+		<div class="icon icon-close"></div>
+	</a>
+
+
+</script>

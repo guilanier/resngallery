@@ -1,0 +1,101 @@
+/* =Center
+------------------- */
+
+/*
+ * Center the content in absolute,
+ * Override height for custom height
+ */
+
+.absolute-centered{
+
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.absolute-centered.is-Overflow {
+
+    overflow: auto;
+}
+
+.absolute-centered.is-Resizable {
+
+    min-width: 20%;
+    max-width: 80%;
+    min-height: 20%;
+    max-height: 80%;
+    resize: both;
+    overflow: auto;
+}
+
+.absolute-centered.is-Variable {
+    display: table;
+    height: auto;
+}
+
+/*
+ * Centered Pseudo
+ */
+
+.centerPseudo {
+    display:inline-block;
+    text-align:center;
+}
+
+.centerPseudo::before{
+    content:'';
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+    width:0px;
+}
+
+/*
+ * Centered Flex
+ */
+
+.centered-flexbox {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+     -ms-flex-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+     -ms-flex-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+/*
+ * Centered table
+ */
+
+.center-Container.is-table { display: table; }
+.is-table .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*
+ * Centered transform
+ */
+
+.is-Transformed { 
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}

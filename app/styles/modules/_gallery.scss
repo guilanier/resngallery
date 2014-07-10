@@ -1,0 +1,98 @@
+$tW: 232px;
+$tH: 328px;
+
+.gallery{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	top: 0;
+	z-index: 1;
+}
+
+.gallery > .gallery_thumbnails-wrapper{
+	position: absolute;
+	top: 50%;
+	transition: all .1s;
+	margin-top: -($tH / 2);
+}
+
+/* #Gallery Thumbnail
+====================================================================================================================================================== */
+
+.gallery_thumbnail{
+	position: absolute;
+	height: $tH;
+	width: $tW;
+	overflow: hidden;
+	color: #FFF;
+	text-transform: uppercase;
+	cursor: pointer;
+	opacity: 0;
+}
+
+	.gallery_thumbnail > .thumbnail_overlay{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		color: #FFF;
+		display: inline-block;
+	}
+
+	.thumbnail_overlay .thumb_overlay_more{
+		padding: 5px 10px;
+		border: 3px solid white;
+		display: inline-block;
+		position: absolute;
+		left: 60px;
+		top: 143px;
+		letter-spacing: 5px;
+		transition: all .3s;
+		transform: scale(1.2, 1.2);
+		opacity: 0;
+	}
+
+	.gallery_thumbnail > .thumbnail_img-wrapper{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transition: background-size .3s;
+		background-size: auto 120%;
+		background-color: rgba(#3db6b8, .85);
+		background-blend-mode:  lighten;
+		background-position: center center;
+		opacity: 0;
+		letter-spacing: 5px;
+		text-align: center;
+		padding-top: 130px;
+		h3{ 
+			font-family: "GothamBold";
+			transition: opacity .3s;
+		}
+	}
+	
+	// Hover State
+	.gallery_thumbnail:hover > .thumbnail_img-wrapper{
+		background-size: auto 100%;
+		h3{ opacity: 0; }
+	}
+
+	.gallery_thumbnail:hover > .thumbnail_overlay{
+		
+		.thumb_overlay_more{
+			transform: scale(1, 1);
+			opacity: 1;
+		}
+	}
+
+/* #Gallery Letters
+====================================================================================================================================================== */
+
+
+/* #Override
+====================================================================================================================================================== */
+
+.iScrollHorizontalScrollbar{
+	bottom: 8px !important;
+	cursor: pointer;
+}

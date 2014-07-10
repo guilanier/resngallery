@@ -1,0 +1,19 @@
+/* #Header
+====================================================================================================================================================== */
+.header{
+	padding-top: 50px;
+	position: relative;
+	text-align: center;
+	z-index: 0;
+}
+
+	.header > .header_text{
+		padding-top: 10px;
+	}
+
+	.header > hr{
+		background-color: #000;
+		height: 5px;
+		width: 55px;
+		margin: 30px auto 30px auto;
+	}

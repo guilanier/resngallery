@@ -1,0 +1,62 @@
+body, html{
+	height: 100%;
+}
+
+.container{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+/* TOOLS */
+@import "tools/site-settings";
+@import "tools/centering";
+
+/* BASE */
+@import "base/base";
+@import "base/normalize";
+
+/* MODULES */
+@import "modules/header";
+@import "modules/letters";
+@import "modules/background";
+@import "modules/gallery";
+@import "modules/details";
+@import "modules/icons";
+
+/* FONTS */
+@font-face {
+  font-family: 'GothamBold';
+  src: url('../fonts/GothamBold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GothamBold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GothamBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GothamBold.svg#4b05af1f343b473876284bf412b923ab') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GothamLight';
+  src: url('../fonts/GothamLight.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GothamLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GothamLight.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GothamLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GothamLight.svg#0fdc6c734a7ca54436fb28af9ab2f202') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'resn-iconset';
+  src: url('../fonts/resn-iconset-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/resn-iconset-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/resn-iconset-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/resn-iconset-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/resn-iconset-Regular.svg#ea4eca88a3bfcad1736c5bb46bac7d9d') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}

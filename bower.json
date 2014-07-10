@@ -1,0 +1,14 @@
+{
+  "name": "kittens",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "backbone": "~1.1.2",
+    "underscore": "~1.6.0",
+    "handlebars": "~1.3.0",
+    "requirejs": "~2.1.14",
+    "requirejs-text": "~2.0.12",
+    "iscroll": "~5.1.2"
+  },
+  "devDependencies": {}
+}

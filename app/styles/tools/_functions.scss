@@ -1,0 +1,35 @@
+// =======================
+// Tools/Functions
+// Thanks to @sutterlity
+// https://github.com/sutter/POPY-Starter-integration-web/blob/master/scss/tools/_fonctions.scss
+// =======================
+
+// Convert px to em
+@function pxtoem($target, $context){
+    @return ($target/$context)+0em;
+}
+
+// Convert em to px
+@function emtopx($target, $context){
+    @return ($target*$context)+0px;
+}
+
+// Relative Size
+// =============
+// Desired font-size ÷ font-size of containing element, or more succinctly:
+// target ÷ context = result
+
+// Based on the relative-size function from Stitch, http://stitchcss.com/
+// To use rems, pass in `rem` as the last parameter
+@function relative-size( $target, $context: $base-fs, $unit: em ) {
+
+  @return #{$target/$context}$unit;
+
+}
+
+// Short alias
+@function rs( $target, $context: $base-fs, $unit: em ) {
+
+  @return relative-size( $target, $context, $unit );
+
+}
