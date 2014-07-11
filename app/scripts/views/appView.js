@@ -26,7 +26,7 @@ define([
 				success: this.onDatasLoaded.bind(this) 
 			} );
 
-			// Instantiate the header and letters Views
+			// Instantiate the header view
 			this.headerView = new HeaderView();
 		},
 
@@ -48,9 +48,9 @@ define([
 
 		openDetails: function (id_) {
 			
-			if(!this.detailsView.isOpen) 
-				this.detailsView.open();
-				this.detailsView.showDetails(id_);
+			if(!this.detailsView.isOpen) this.detailsView.open();
+			
+			this.detailsView.showDetails(id_);
 		},
 
 		closeDetails: function () {

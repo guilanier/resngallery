@@ -46,8 +46,8 @@
 			.2);
 			tl.addCallback(this.playReorderAnim.bind(this))
 			  .to(thumbnailsDOM, .3, { rotation: 0, delay: .15 * thumbnailsDOM.length })
-			  .to(thumbnailsDOM, .5, { scaleX: 1 })
-			  .to(thumbnailsDOM, .3, { scaleY: 1 })
+			  .to(thumbnailsDOM, .5, { scaleX: 1, ease: Back.easeOut })
+			  .to(thumbnailsDOM, .3, { scaleY: 1, ease: Back.easeOut })
 			  .staggerTo($(thumbnailsDOM).find('.thumbnail_img-wrapper'), .3, { alpha: 1 }, .2);
 		},
 
@@ -91,6 +91,7 @@
 
 			var thumbSpacing = 20;
 			var thumbWidth   = 232;
+			
 			var tl = new TimelineMax();
 			// Play the animation of reordering thumbnails
 			for (var i = 0; i < this.thumbnails.length; i++) {
