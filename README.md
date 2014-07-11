@@ -6,3 +6,5 @@ npm install + bower install: installing all the project dependencies and then 'g
 
 For an updated version IE9+:
 I would include Modernizr and polyfills all the functionalities that are not supported
+
+I also would like to add some floating balls of wool modelized in 3d in the slideshow's background. :)
