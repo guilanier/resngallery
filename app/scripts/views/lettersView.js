@@ -43,7 +43,7 @@ define([
 
 				$(el).data('initposX', posX)
 					 .data('initposY', (wH / numLetters) * i)
-					 .data('dep', 300*Math.random());
+					 .data('v', 300*Math.random());
 			});
 		},
 
@@ -59,8 +59,8 @@ define([
 
 			this.$el.find('.letters_char').each(function (i, el) {
 				TweenMax.set(el, {
-					x: Math.floor($(el).data('initposX') + ( ( $(el).data('dep')*0.3 ) * rX )),
-					y: Math.floor($(el).data('initposY') + ( ( $(el).data('dep')*0.3 ) * rY )),
+					x: Math.floor($(el).data('initposX') + ( ( $(el).data('v')*0.3 ) * rX )),
+					y: Math.floor($(el).data('initposY') + ( ( $(el).data('v')*0.3 ) * rY )),
 				});
 			});
 		},

@@ -26,3 +26,10 @@ $list-colors-letters: (#b6e5b9, #c5dcb1, #bddfc9, #bddfc9, #bddfc9, #bdd5e5, #9e
 		color: nth($list-colors-letters, $i);
 	}
 }
+
+// Alternative letters coloration by letters gradient 
+// @for $i from 1 to length($list-colors-letters)+1{
+// 	.letters > .letters_char:nth-child(#{$i}){
+// 		color: lighten(#bdd5e5, $i * 4%);
+// 	}
+// }
