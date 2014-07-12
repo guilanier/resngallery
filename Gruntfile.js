@@ -335,11 +335,11 @@ module.exports = function (grunt) {
         requirejs: {
             compile: {
                 options: {
-                    baseUrl: "<%= config.app %>/scripts",
-                    mainConfigFile: "<%= config.app %>/scripts/config.js",
-                    name: "main", // assumes a production build using almond
-                    out: "<%= config.dist %>/scripts/main.min.js",
-                    optimize: "uglify"
+                    baseUrl: '<%= config.app %>/scripts',
+                    mainConfigFile: '<%= config.app %>/scripts/config.js',
+                    name: 'main', // assumes a production build using almond
+                    out: '<%= config.dist %>/scripts/main.min.js',
+                    optimize: 'uglify'
                 }
             }
         },

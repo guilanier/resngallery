@@ -26,15 +26,15 @@ define([
 			this.$el.show();
 			this.isOpen = true;
 			
-			TweenMax.set(this.$el, { scaleX: .9, scaleY: .9, alpha: 0 });
-			TweenMax.to(this.$el, .3, { scaleX: 1, scaleY: 1, alpha: 1 });
+			TweenMax.set(this.$el, { scaleX: 0.9, scaleY: 0.9, alpha: 0 });
+			TweenMax.to(this.$el, 0.3, { scaleX: 1, scaleY: 1, alpha: 1 });
 		},
 
 		close: function () {
 
 			this.isOpen = false;
 
-			TweenMax.to(this.$el, .3, { scaleX: .9, scaleY: .9, alpha: 0, onComplete: this.onCloseComplete.bind(this) });
+			TweenMax.to(this.$el, 0.3, { scaleX: 0.9, scaleY: 0.9, alpha: 0, onComplete: this.onCloseComplete.bind(this) });
 		},
 
 		onCloseComplete: function () {
@@ -51,14 +51,14 @@ define([
 			TweenMax.set(this.$el.find('.details_wrapper_info'), { alpha: 0, x: -50 });
 			TweenMax.set(this.$el.find('.details_wrapper_img'), { alpha: 0 });
 
-			TweenMax.to(this.$el.find('.details_wrapper_info'), .3, { alpha: 1, x: 0 });
-			TweenMax.to(this.$el.find('.details_wrapper_img'), .3, { alpha: 1, delay: .1 });
+			TweenMax.to(this.$el.find('.details_wrapper_info'), 0.3, { alpha: 1, x: 0 });
+			TweenMax.to(this.$el.find('.details_wrapper_img'), 0.3, { alpha: 1, delay: 0.1 });
 		},
 
 		hideDetails: function () {
 
-			TweenMax.to(this.$el.find('.details_wrapper_info'), .3, { alpha: 0, x: -50 });
-			TweenMax.to(this.$el.find('.details_wrapper_img'), .3, { alpha: 0, delay: .2 });
+			TweenMax.to(this.$el.find('.details_wrapper_info'), 0.3, { alpha: 0, x: -50 });
+			TweenMax.to(this.$el.find('.details_wrapper_img'), 0.3, { alpha: 0, delay: 0.2 });
 		},
 
 		// On link click, play the hide animation and navigate to the router when the animation is over 

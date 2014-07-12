@@ -11,7 +11,7 @@ define(['jquery'], function ($) {
 		$('.stripe-l').css( 'clip', 'rect(0, '+sT+'px, auto, 0)' );
 		$('.stripe-b').css( 'clip', 'rect('+(wH-sT)+'px, auto, auto, auto)' );
 		$('.stripe-r').css( 'clip', 'rect(auto, auto, auto, '+(wW-sT)+'px)' );
-	}
+	};
 
 	$(window).resize( onResize );
 	onResize();

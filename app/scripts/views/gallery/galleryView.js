@@ -32,23 +32,23 @@
 
 			// Configure timeline animation
 			var tl = new TimelineMax({ onComplete: this.onIntroComplete.bind(this) });
-			tl.staggerTo(thumbnailsDOM, .3, { 
+			tl.staggerTo(thumbnailsDOM, 0.3, { 
 					y: 0,
 					alpha: 1,
 					startAt:{ 
-						y: -wH * .5, 
-						x: (wW * .5) - 115, 
-						scaleX:.14, 
-						scaleY:.1, 
+						y: -wH * 0.5, 
+						x: (wW * 0.5) - 115, 
+						scaleX: 0.14, 
+						scaleY: 0.1, 
 						rotation: '45deg'
 					}	
 				},
 			.2);
 			tl.addCallback(this.playReorderAnim.bind(this))
-			  .to(thumbnailsDOM, .3, { rotation: 0, delay: .15 * thumbnailsDOM.length })
-			  .to(thumbnailsDOM, .5, { scaleX: 1, ease: Back.easeOut })
-			  .to(thumbnailsDOM, .3, { scaleY: 1, ease: Back.easeOut })
-			  .staggerTo($(thumbnailsDOM).find('.thumbnail_img-wrapper'), .3, { alpha: 1 }, .2);
+			  .to(thumbnailsDOM, 0.3, { rotation: 0, delay: 0.15 * thumbnailsDOM.length })
+			  .to(thumbnailsDOM, 0.3, { scaleX: 1, ease: Back.easeOut, delay: 0.1 })
+			  .to(thumbnailsDOM, 0.3, { scaleY: 1, ease: Back.easeOut })
+			  .staggerTo($(thumbnailsDOM).find('.thumbnail_img-wrapper'), 0.3, { alpha: 1 }, 0.2);
 		},
 
 		onIntroComplete: function () {
@@ -95,7 +95,7 @@
 			var tl = new TimelineMax();
 			// Play the animation of reordering thumbnails
 			for (var i = 0; i < this.thumbnails.length; i++) {
-				tl.to(this.thumbnails[i].el, .2, { x: thumbSpacing + (thumbSpacing + thumbWidth) * i }, "-=0.1")
+				tl.to(this.thumbnails[i].el, 0.2, { x: thumbSpacing + (thumbSpacing + thumbWidth) * i }, "-=0.1")
 			};
 
 			// Set the size of the wrapper

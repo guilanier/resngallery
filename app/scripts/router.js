@@ -1,61 +1,64 @@
 define(function(require, exports, module) {
-  "use strict";
+    'use strict';
 
-  // External dependencies.
-  var Backbone = require("backbone");
-  var $        = require("jquery");
-  var app      = require("app");
-  var AppView  = require("views/appView");
-  var Background = require("utils/background");
+    // External dependencies.
+    var Backbone = require('backbone');
+    var $        = require('jquery');
+    var app      = require('app');
+    var AppView  = require('views/appView');
+    var Background = require('utils/background');
 
-  // Defining the application router.
-  var Router = Backbone.Router.extend({
-    routes: {
-      ""  : "index",
-      "/" : "index",
-      "details/:id" : "goDetails"
-    },
+    // Defining the application router.
+    var Router = Backbone.Router.extend({
 
-    initialize: function () {
+        routes: {
+            ''  : 'index',
+            '/' : 'index',
+            'details/:id' : 'goDetails'
+        },
 
-      $(document).on("click", "a[href^='/']", function (event) {
-        var href = $(event.currentTarget).attr('href');
+        initialize: function () {
 
-        // chain 'or's for other black list routes
-        var passThrough = href.indexOf('sign_out') >= 0;
+            $(document).on('click', 'a[href^="/"]', function (event) {
+                var href = $(event.currentTarget).attr('href');
 
-        // Allow shift+click for new tabs, etc.
-        if(!passThrough && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey){
-          event.preventDefault();
+                // chain 'or's for other black list routes
+                var passThrough = href.indexOf('sign_out') >= 0;
 
-          // Remove leading slashes and hash bangs (backward compatablility)
-          var url = href.replace(/^\//,'').replace('\#\!\/','');
+                // Allow shift+click for new tabs, etc.
+                if(!passThrough && !event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey){
 
-          // Instruct Backbone to trigger routing events
-          app.router.navigate(url, { trigger: true });
+                    event.preventDefault();
+                    
+                    // Remove leading slashes and hash bangs (backward compatablility)
+                    var url = href.replace(/^\//,'').replace('\#\!\/','');
+
+                    // Instruct Backbone to trigger routing events
+                    app.router.navigate(url, { trigger: true });
+                }
+            });
+
+            this.setup();
+        },
+
+        index: function() {
+            this.appView.closeDetails();
+        },
+
+        setup: function () {
+            
+            if (!this.appView) {
+                this.appView = new AppView( { el: '#app' } );
+            }
+        },
+
+        goDetails: function (id_) {
+            
+            this.setup();
+            this.appView.openDetails(id_);
         }
 
-      });
+    });
 
-      this.setup();
-    },
-
-    index: function() {
-      this.appView.closeDetails();
-    },
-
-    setup: function () {
-      if (!this.appView) {
-        this.appView = new AppView( { el: '#app' } );
-      }; 
-    },
-
-    goDetails: function (id_) {
-      this.setup();
-      this.appView.openDetails(id_);
-    }
-
-  });
-
-  module.exports = Router;
+    module.exports = Router;
 });

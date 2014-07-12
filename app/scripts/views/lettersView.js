@@ -1,9 +1,9 @@
 define([
-	'backbone', 
+	'backbone',
 	'jquery',
 	'tweenmax',
 	'text!templates/letters.html'
-	], function (Backbone, $, TweenMax, template) {
+], function (Backbone, $, TweenMax, template) {
 
 	var LettersView = Backbone.View.extend({
 
@@ -14,26 +14,27 @@ define([
 		},
 
 		start: function () {
+
 			this.setLettersPos();
 
 			TweenMax.staggerTo(this.$el.find('.letters_char'), 1, {
 				alpha : 1,
-				scaleX: 1, 
+				scaleX: 1,
 				scaleY: 1,
-				startAt: { scaleX: .3, scaleY: .3 },
+				startAt: { scaleX: 0.3, scaleY: 0.3 },
 				delay: 5
-			}, .3);
+			}, 0.3);
 		},
 
 		setLettersPos: function () {
 			
-			var wW    	= $(window).width();
-			var wH 		= $(window).height();
+			var wW	= $(window).width();
+			var wH	= $(window).height();
 			var numLetters = this.$el.find('.letters_char').length;
 
 			this.$el.find('.letters_char').each(function (i, el) {
 
-				var posX = (wW * .5) - (getRandomArbitrary(-1, 1) * (wW * .3));
+				var posX = (wW * 0.5) - (getRandomArbitrary(-1, 1) * (wW * 0.3));
 				
 				TweenMax.set(el, {
 					x: posX,
@@ -43,7 +44,7 @@ define([
 				$(el).data('initposX', posX)
 					 .data('initposY', (wH / numLetters) * i)
 					 .data('dep', 300*Math.random());
-			})
+			});
 		},
 
 		/**
@@ -53,15 +54,15 @@ define([
 		 */
 		updateLettersPos: function (x_, y_) {
 
-			var rX    	=  (x_ / $(window).width() * 2) - 1;
-			var rY		=  (y_ / $(window).height() * 2) - 1;
+			var rX =  (x_ / $(window).width() * 2) - 1;
+			var rY =  (y_ / $(window).height() * 2) - 1;
 
 			this.$el.find('.letters_char').each(function (i, el) {
 				TweenMax.set(el, {
 					x: Math.floor($(el).data('initposX') + ( ( $(el).data('dep')*0.3 ) * rX )),
 					y: Math.floor($(el).data('initposY') + ( ( $(el).data('dep')*0.3 ) * rY )),
 				});
-			})	
+			});
 		},
 
 		render: function () {

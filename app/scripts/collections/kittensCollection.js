@@ -2,12 +2,12 @@ define(['underscore', 'backbone', 'models/kittenModel'], function (_, Backbone, 
 	
 	var KittensCollection = Backbone.Collection.extend({
 
-		model      : Kitten,
-		colors 	   : ['#98d3eb', '#88d0eb', '#9cf2ef', '#a3edc2', '#b9e79b', '#dfe57f', '#fedf71', '#ffb361', '#ff8753'],
-		comparator : 'pid',
+		model		: Kitten,
+		colors		: ['#98d3eb', '#88d0eb', '#9cf2ef', '#a3edc2', '#b9e79b', '#dfe57f', '#fedf71', '#ffb361', '#ff8753'],
+		comparator	: 'pid',
 
 		url   : function () {
-			return document.URL + '/../datas/images.json'
+			return document.URL + '/../datas/images.json';
 		},
 
 		initialize: function () {
